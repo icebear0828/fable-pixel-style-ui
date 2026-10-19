@@ -1,0 +1,24 @@
+/* Storybook canvas base styles */
+body {
+  font-family: var(--pxui-font-text);
+  color: var(--pxui-ink);
+  font-size: 14px;
+  line-height: 1.7;
+}
+.sb-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+}
+.sb-col {
+  display: grid;
+  gap: 16px;
+  min-width: 320px;
+}
+.sb-label {
+  font-family: var(--pxui-font);
+  font-size: 9px;
+  color: var(--pxui-slate);
+  margin-bottom: 8px;
+}

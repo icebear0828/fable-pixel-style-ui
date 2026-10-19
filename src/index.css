@@ -1,0 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+@import "tailwindcss";
+@import "./components/styles/tokens.css";
+@import "./components/styles/general.css";
+@import "./components/styles/form.css";
+@import "./components/styles/data.css";
+@import "./components/styles/feedback.css";
+@import "./docs/docs.css";

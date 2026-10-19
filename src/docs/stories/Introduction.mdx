@@ -1,0 +1,59 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Overview/Introduction" />
+
+<div style={{ display: "flex", alignItems: "center", gap: 20, marginBottom: 24 }}>
+  <svg width="96" height="90" viewBox="0 0 16 15" shapeRendering="crispEdges">
+    <path fill="#1d2b53" d="M2 0h1v1H2zM13 0h1v1H13zM1 1h1v1H1zM3 1h1v1H3zM12 1h1v1H12zM14 1h1v1H14zM1 2h1v1H1zM4 2h1v1H4zM11 2h1v1H11zM14 2h1v1H14zM1 3h1v1H1zM5 3h6v1H5zM14 3h1v1H14zM0 4h1v1H0zM15 4h1v1H15zM0 5h1v1H0zM15 5h1v1H15zM0 6h1v1H0zM4 6h2v1H4zM10 6h2v1H10zM15 6h1v1H15zM0 7h1v1H0zM4 7h1v1H4zM10 7h1v1H10zM15 7h1v1H15zM0 8h1v1H0zM15 8h1v1H15zM0 9h1v1H0zM15 9h1v1H15zM0 10h1v1H0zM15 10h1v1H15zM1 11h1v1H1zM14 11h1v1H14zM1 12h1v1H1zM14 12h1v1H14zM2 13h1v1H2zM13 13h1v1H13zM3 14h10v1H3z" />
+    <path fill="#ffa300" d="M2 1h1v1H2zM13 1h1v1H13zM2 2h2v1H2zM12 2h2v1H12zM2 3h3v1H2zM11 3h3v1H11zM1 4h14v1H1zM1 5h14v1H1zM1 6h3v1H1zM6 6h4v1H6zM12 6h3v1H12zM1 7h3v1H1zM6 7h4v1H6zM12 7h3v1H12zM1 8h14v1H1zM1 9h1v1H1zM4 9h8v1H4zM14 9h1v1H14zM1 10h1v1H1zM4 10h3v1H4zM9 10h4v1H9zM14 10h1v1H14zM2 11h4v1H2zM7 11h2v1H7zM10 11h4v1H10zM2 12h12v1H2zM3 13h10v1H3z" />
+    <path fill="#ffffff" d="M5 7h1v1H5zM11 7h1v1H11z" />
+    <path fill="#ffccaa" d="M2 9h2v1H2zM12 9h2v1H12zM2 10h2v1H2zM12 10h2v1H12z" />
+    <path fill="#ff77a8" d="M7 10h2v1H7zM6 11h1v1H6zM9 11h1v1H9z" />
+  </svg>
+  <div>
+    <h1 style={{ fontFamily: "'Press Start 2P', monospace", fontSize: 24, margin: 0, textShadow: "4px 4px 0 #c2c3c7" }}>PIXELNEST UI</h1>
+    <p style={{ margin: "8px 0 0", color: "#5f574f" }}>一套像素风格的 React + TypeScript 组件库 · 29 Components</p>
+  </div>
+</div>
+
+**PixelNest UI** 把 8-bit 游戏的视觉语言带进现代 Web：缺角像素边框、PICO-8 调色板、`steps()` 阶梯动效、字符网格像素画。
+
+## 快速开始
+
+```bash
+npm install pixelnest-ui
+```
+
+```tsx
+import { Button, Card, toast } from "pixelnest-ui";
+import "pixelnest-ui/style";
+
+<Card title="INVENTORY">
+  <Button type="primary" onClick={() => toast.success("SAVED!")}>
+    SAVE GAME
+  </Button>
+</Card>
+```
+
+## 如何使用本 Storybook
+
+- 左侧目录按 **General / Form / Data / Feedback** 四类组织，与文档站保持一致。
+- 每个组件的 **Docs** 页由 `autodocs` 自动生成 Props 表（来自 TypeScript 类型与 JSDoc 注释）。
+- **Playground** story 开放全部 Controls，修改后可在右下角 *Show code* 复制 JSX。
+- 工具栏的 **Backgrounds** 可切换 Paper / White / Ink 背景，检查组件在深色环境下的表现。
+
+## 设计原则
+
+| 原则 | 说明 |
+| --- | --- |
+| 4px 网格 | 边框、投影、间距均为 4px 的整数倍 |
+| 硬边无圆角 | 不使用 `border-radius` 与模糊阴影，圆形由 20 边形 `clip-path` 近似 |
+| 深色描边 | 所有可交互元素都有 ink 色描边；亮色填充 + 内阴影形成 3D 按键感 |
+| 阶梯动效 | 过渡与动画使用 `steps()`，并尊重 `prefers-reduced-motion` |
+
+## 目录
+
+- **General**：Button · Icon · Sprite · Title · Divider · Tag · Badge · Avatar
+- **Form**：Input · Checkbox · Radio · Switch · Select · Slider · Rate
+- **Data**：Card · Table · Progress · Tooltip · Collapse · Tabs · Pagination · Skeleton · Balloon · Typewriter
+- **Feedback**：Modal · Toast · Alert · Loading
